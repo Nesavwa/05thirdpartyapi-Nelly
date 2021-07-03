@@ -85,4 +85,21 @@ function createTimeRow(time) {
     return row;
 }
 
+function main(){
 
+    // Goal : generate the timeblocks
+    // we will loop for 9 times to generate these blocks
+    for (let index = 0; index < 9; index++) {
+        // for each loop we will create a row
+        let time = index + 9 + "00";
+    
+        if (time.length === 3) {
+            time = "0" + time;
+        }
+        const row = createTimeRow(time);
+    
+        timeContainer.appendChild(row);
+    }
+}
+
+main();
